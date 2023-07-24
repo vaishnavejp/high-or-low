@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div>
-      <Game />
-      {/* <LandingPage /> */}
+      {/* <Game /> */}
+      <LandingPage score='-1'/>
     </div>
   );
 }

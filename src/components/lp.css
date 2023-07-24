@@ -3,6 +3,9 @@
     overflow-x: hidden;
 }
 
+button {
+    cursor: pointer;
+}
 .ir img {
     height: 100vh;
     width: 100vw;

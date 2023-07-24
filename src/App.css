@@ -1,22 +1,17 @@
 body {
     background-color: black;
-    color: aquamarine;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow-x: hidden;
-                                                                                                                                                                                                                                                overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 .imgs {
-    display: grid;
-        grid-template-columns: 1fr 1fr;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.score {
-    position: absolute;
+    text-align: center;
 }
 
 .leftimg button {
@@ -27,39 +22,38 @@ body {
     position: absolute;
 }
 
-#b1 {
-    left: 50%;
-    /* right: 0; */
-    top: 50%;
-    z-index: 2;
-}
-
-.samebtn {
-    position: absolute;
-    left: 37vw;
-    top: 10px;
-    z-index: 2;
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    color: black;
-    font-size: xx-large;
-}
-
-.imgs button {
-    /* color: aquamarine; */
-    /* background-color: black; */
-    /* height: 50px;
-    width: 513px; */
-    border: 2px solid black;
-    border-radius: 70px;
-    cursor: pointer;
-}
-.leftimg,
-.rightimg {
+#b1,
+.or {
     position: relative;
+    z-index: 3;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    background-color: transparent;
+    font-weight: bolder;
+    height: 50px;
+    border: 2px solid #3d3913;
+    color: #eadb07;
+    font-size: larger;
+    text-shadow: 3px 0px 7px rgba(81, 67, 21, 0.8),
+        -3px 0px 7px rgba(81, 67, 21, 0.8),
+        0px 4px 7px rgba(81, 67, 21, 0.8);
 }
 
+.or {
+    width: 40%;
+    height: 50%;
+}
+
+.score {
+    position: absolute;
+    color: #cfc547;
+
+    text-shadow: 10px 10px 25px rgb(81, 67, 21),
+        -10px 10px 25px rgb(81, 67, 21),
+        -10px -10px 25px rgb(81, 67, 21),
+        10px -10px 25px rgb(81, 67, 21);
+}
 
 .leftimg img,
 .rightimg img {
@@ -67,49 +61,3 @@ body {
             height: 100vh;
 }
 
-/* 
-.score {
-    display: block;
-    margin-top: 450px;
-}
-
-*/
-/* .score2 img {
-    width: 100%;
-    height: 100vh;
-}
-
-*/
-/* .scoreCard {
-    position: relative;
-    bottom: 500px;
-    text-align: center;
-    color: aliceblue;
-}
-
-*/
-/* button {
-    display: block;
-    margin-top: 5%;
-    color: aquamarine;
-    margin-left: 10%;
-    background-color: transparent;
-    height: 50px;
-    width: 513px;
-    border: 1px solid aqua;
-    border-radius: 70px;
-    cursor: pointer;
-}
-
-*/
-/* .samebtn {
-    margin-left: 0;
-}
-
-*/
-/* .play {
-    margin-left: 0;
-    color: white;
-    border: 1px solid white;
-}
-*/

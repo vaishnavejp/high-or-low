@@ -1,5 +1,6 @@
 import React from 'react';
 import finalList from './finalList';
+import LandingPage from './LandingPage';
 
 export default function Header() {
     const i = Math.floor(Math.random() * 250);
@@ -176,28 +177,22 @@ export default function Header() {
             <div className='imgs'>
                 <div className='leftimg'>
                     <img src={img1.src1} alt={img1.name1} />
-                    <button onClick={handleButton1} id='b1'>{img1.name1}</button>
                 </div>
                 <div className='score'>
+                    <button onClick={handleButton1} id='b1'>{img1.name1}</button> <br/> <br/>
+                    <button className="or" onClick={handleButton3}>OR</button> <br/><br/>
+                    <button onClick={handleButton2} id='b1'>{img2.name2}</button>
                     <h1>Score : {score}</h1>
-                    <button className="samebtn" onClick={handleButton3}>OR</button>
                 </div>
                 <div className='rightimg'>
                     <img src={img2.src2} alt={img2.name2} />
-                    <button onClick={handleButton2} id='b1'>{img2.name2}</button>
                 </div>
             </div>
         )
     }
     else {
         return (
-            <div className='score2'>
-                <img src="bg2.png" />
-                <div className='scoreCard'>
-                    <h1>Final Score : {score}</h1>
-                    <button onClick={handleRefresh} className="play">Play Again</button>
-                </div>
-            </div>
+            <LandingPage score={score} />
         )
     }
 }
