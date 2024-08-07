@@ -2,16 +2,13 @@ import { useState } from 'react';
 import '../App.css';
 import Game from './Game';
 import './lp.css';
-// import bg from './twbb.jpg'
 
 function LandingPage(props) {
 
-  console.log('hi' + props.score)
-
-  const[press, setPress] = useState(0)
+  const[press, setPress] = useState(false)
 
   const bg = {
-    backgroundImage: `url(${require('./twbb.jpg')})`,
+    backgroundImage: `url(${require('./assets/bg.jpg')})`,
     height: "100vh",
     width: "100vw",
     overflow: "hidden",
@@ -20,10 +17,10 @@ function LandingPage(props) {
 
   function handlePlay() {
     console.log(press);
-    setPress(1)
+    setPress(true)
   }
 
-  if(press === 1) {
+  if(press === true) {
     console.log('vaish')
     return (
       <Game />
@@ -33,13 +30,13 @@ function LandingPage(props) {
   else if(props.score == '-1' ) {
     return (
       <div className='ir' style={bg}>
-      <br/> <br/>
-      <div className='text'>
-        <span className='alignText'><h4>The</h4> <h1>higher or lower</h1> <h4>game</h4></span><br></br>
-        <h3>Which is ranked higher in IMdB?</h3>
-        <button id='play' onClick={handlePlay}>Play</button>
+        <br/> <br/>
+        <div className='text'>
+          <h4>The</h4> <h1>higher or lower</h1> <h4>game</h4><br></br>
+          <h3>Which is ranked higher in IMdB?</h3>
+          <button id='play' onClick={handlePlay}>Play</button>
+        </div>
       </div>
-    </div>
     )
   }
 
@@ -47,13 +44,14 @@ function LandingPage(props) {
     return (
       <div className='ir' style={bg}>
       <br/> <br/>
-      <div className='text'>
-        <span className='alignText'><h4>The</h4> <h1>higher or lower</h1> <h4>game</h4></span><br></br>
-        <h3>Which is ranked higher in IMdB?</h3> <br /><br /><br />
-        <span className='alignText'>Final Score : {props.score}</span><br></br>
-        <button id='play' onClick={handlePlay}>Play Again</button>
+        <div className='text'>
+          <h4>The</h4> <h1>higher or lower</h1> <h4>game</h4><br></br>
+          <h3>Which is ranked higher in IMdB?</h3> <br /><br /><br />
+          Final Score : {props.score}<br></br>
+          High Score : {localStorage.getItem('topScore')}<br></br>
+          <button id='play' onClick={handlePlay}>Play Again</button>
+        </div>
       </div>
-    </div>
     )
   }
 

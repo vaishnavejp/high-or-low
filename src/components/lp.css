@@ -1,19 +1,21 @@
 .ir {
-    /* background-color: aquamarine; */
     overflow-x: hidden;
+    display: flex;
+        flex-direction: column;
 }
 
 button {
     cursor: pointer;
 }
-.ir img {
-    height: 100vh;
-    width: 100vw;
-}
 
 .text {
+    min-width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -21,18 +23,25 @@ button {
 h4 {
     margin: 0;
     text-transform: uppercase;
+    color: white;
+        font-family: hitch, sans-serif;
+        font-size: xx-large;
 }
 
 .text h5 {
     font-family: sans-serif;
 }
 
+.text h3 {
+    font-size: medium;
+}
 #play {
-    background-color: black;
-    color: brown;
-    margin: 0;
-    margin-top: 3%;
-    width: 15%;
-    border: none;
+    background-color: transparent;
+        color: white;
+        border-color: white;
     font-size: large;
+    margin-top: 10px;
+        min-width: 250px;
+        min-height: 50px;
+        border-radius: 20px;
 }

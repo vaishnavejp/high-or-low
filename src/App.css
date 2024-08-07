@@ -9,9 +9,43 @@ body {
 
 .imgs {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100vw;
+        height: 100vh;
+        background-color: #eadb07;
+    }
+    
+    .leftimg,
+    .rightimg {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .imgs {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+    
+        .leftimg,
+        .rightimg {
+            height: 50%;
+            width: 100%;
+        }
+    
+        .leftimg img,
+        .rightimg img {
+            /* width: 100vw; */
+            max-height: 100%;
+            object-fit: fill;
+        }
 }
 
 .leftimg button {
@@ -22,8 +56,7 @@ body {
     position: absolute;
 }
 
-#b1,
-.or {
+#b1 {
     position: relative;
     z-index: 3;
     border-radius: 20px;
@@ -41,8 +74,13 @@ body {
 }
 
 .or {
-    width: 40%;
-    height: 50%;
+    width: 100px;
+        height: 100px;
+        position: relative;
+        z-index: 3;
+        border-radius: 100%;
+        border: none;
+        font-size: 30px;
 }
 
 .score {
@@ -57,7 +95,63 @@ body {
 
 .leftimg img,
 .rightimg img {
-        width: 40vw;
+        width: 100%;
             height: 100vh;
+            filter: brightness(60%);
+            }
+            
+            @font-face {
+                font-family: hitch;
+                src: url(../public/Hitchcut-Regular.ttf);
+            }
+            
+            .nameMovie {
+                position: absolute;
+                color: aliceblue;
+                z-index: 10;
+                margin: 0;
+                /* height: fit-content; */
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            
+            .nameMovie h3 {
+                font-size: 50px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .nameMovie h2 {
+                font-size: 40px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            #playy {
+                cursor: pointer;
+                color: #ffee00;
+                background-color: transparent;
+                font-size: large;
+                min-width: 150px;
+                min-height: 50px;
+                border-radius: 20px;
+                border: 1px solid white;
+                margin: 5px;
+            }
+            
+            .btns {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-height: 300px;
+            }
+            
+            .score {
+                z-index: 10;
+                text-align: center;
+                margin-bottom: 0;
+                font-size: small;
+                justify-content: center;
 }
 
